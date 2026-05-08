@@ -32,6 +32,10 @@ services:
       - data:/var/lib/postgresql/data/
     <<: *default-logging
     restart: always
+    environment:
+           POSTGRES_USER: judge0
+           POSTGRES_PASSWORD: judge0
+           POSTGRES_DB: judge0
 
   redis:
     image: redis:7.2.4
